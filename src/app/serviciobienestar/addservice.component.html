@@ -1,0 +1,78 @@
+
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+
+  <div class="container">
+    <div class="title">Agregar Servicio</div>
+    <div class="content">
+      <form (ngSubmit) = "create()" action="#">
+        <div class="service-details">
+
+          <div class="input-box">
+
+            <span class="details">Nombre Servicio</span>
+            <input type="text"  [(ngModel)]="serviciobienestar.name" name = "name"placeholder="Ingresa el nombre del servicio" required>
+          </div>
+
+    <!--      <div class="input-box">
+
+            <span class="details">Hora apartura del servicio</span>
+            <input type="time" required>   -->
+          <div class="input-box">
+          <span class="details">identificación</span>
+          <input type="number"  [(ngModel)]="serviciobienestar.id" name = "id" placeholder="Ingresa el nombre del servicio" required>
+          </div>
+
+
+
+    <!--   <div class="input-box">
+            <span class="details">Sede</span>
+          <select name="sedes">
+          <option  selected value="Selecciona una sede" disabled>Selecciona una sede</option>
+          <option>Universidad De Ibagué</option>
+          <option>Santa Ana</option>
+
+          </select>
+          </div> -->
+  <div class="input-box">
+          <span class="details">sede</span>
+          <input type="number"  [(ngModel)]="serviciobienestar.campus_Id" name = "sede" placeholder="Ingresa el nombre del servicio" required>
+        </div>
+
+
+      <!--    <div class="input-box">
+            <span class="details">Hora Finalización del servicio</span>
+            <input type="time" required>
+          </div> -->
+
+  <div class="input-box">
+          <span class="details">capacidad</span>
+          <input type="number"  [(ngModel)]="serviciobienestar.capacity" name = "capacity" placeholder="Ingresa el nombre del servicio" required>
+        </div>
+
+
+
+
+          <div class="input-box2">
+            <span class="details">Descripción</span>
+          <textarea name="comentarios" [(ngModel)]="serviciobienestar.description" name = "description" placeholder="Ingrese una descipción"></textarea>
+
+          </div>
+
+  </div>
+
+        <div class="button">
+        <input name = "butAgregar" type="submit" (click)=listAndCloseService() routerLink="/servicetable" value="Agregar">
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>

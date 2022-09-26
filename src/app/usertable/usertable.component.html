@@ -1,0 +1,60 @@
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	<app-sidebar></app-sidebar>
+  <form action="#">
+
+  </form>
+  <div class="details">
+               <div class="recentOrders">
+                 <div class="cardHeader">
+                     <h2>Reservas</h2>
+
+                     <div class="button">
+                       <input type="submit"  value="Agregar">
+                     </div>
+
+                 </div>
+
+                   <table>
+                       <thead>
+                           <tr>
+                               <td>Nombres</td>
+                               <td>apellidos</td>
+                               <td>Identificación</td>
+                               <td>email</td>
+                               <td>rol</td>
+                               <td>Editar</td>
+                               <td>Eliminar</td>
+
+                           </tr>
+                       </thead>
+
+                       <tbody>
+                           <tr *ngFor="let persona of personas">
+                             <td>{{ persona.name }}</td>
+                             <td>{{ persona.lastName }}</td>
+                             <td>{{ persona.id }}</td>
+                             <td>{{ persona.email }}</td>
+                             <td>{{ persona.userType }}</td>
+                             <td><i class="fa-solid fa-pen" style="color: blue;"></i></td>
+                             <td><i class="fa-solid fa-trash" style="color: red;"></i></td>
+
+                           </tr>
+
+
+
+
+                       </tbody>
+                   </table>
+               </div>
+   </div>
+             </body>

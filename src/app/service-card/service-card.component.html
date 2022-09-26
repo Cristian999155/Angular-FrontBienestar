@@ -1,0 +1,70 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css file link  -->
+
+
+</head>
+<body>
+   <app-navbar></app-navbar>
+	<app-sidebar></app-sidebar>
+
+<div class="container">
+
+  <div class="button">
+     <input type="submit"  (click)="openAddForm()" value="Agregar Servicio">
+
+  </div>
+
+
+  <div class="button2">
+     <input type="button"  (click)="addEditables()" value="editar letra">
+
+  </div>
+
+    <div class="box-container">
+
+
+        <div class="box">
+          <div class="icons">
+      <i class="fa-solid fa-gear"></i>
+          </div>
+            <img src="assets\img\balon.png" alt="">
+            <h3>aaa</h3>
+         <<p>sasa sasas</p>
+          <!--  <input type="text" [(ngModel)]="ser.description" name="name" >  -->
+            <a href="#" class="btn" routerLink="/table">Ver Reservas</a>
+        </div>
+
+
+        <div class="box">
+          <div class="icons">
+      <i class="fa-solid fa-gear"></i>
+          </div>
+            <img src="assets\img\balon.png" alt="">
+            <h3>Cancha Grama natural</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+              <a href="#" class="btn">Ver Reservas</a>
+        </div>
+
+        <div class="box">
+          <div class="icons">
+      <i class="fa-solid fa-gear"></i>
+          </div>
+            <img src="assets\img\balon.png" alt="">
+            <h3>Cancha Multiple</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+            <a href="#" class="btn">Ver Reservas</a>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>

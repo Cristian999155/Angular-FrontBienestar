@@ -1,0 +1,74 @@
+
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  	<app-sidebar></app-sidebar>
+
+  <div class="container">
+    <div class="title">Agregar Usuario</div>
+    <div class="content">
+      <form (ngSubmit) = "create()" action="#">
+        <div class="service-details">
+          <div class="input-box">
+
+            <span class="details">Nombres</span>
+            <input type="text" [(ngModel)]="persona.name" name = "name" placeholder="Ingresa los nombres" required>
+          </div>
+
+          <div class="input-box">
+
+            <span class="details">Apellidos</span>
+              <input type="text" [(ngModel)]="persona.lastName" name = "lastname"  placeholder="Ingresa los apellidos" required>
+          </div>
+
+          <div class="input-box">
+
+            <span class="details">Identificación</span>
+              <input type="number" [(ngModel)]="persona.id" name = "ide" placeholder="Ingresa la identificación" >
+          </div>
+
+       <div class="input-box">
+
+          <span class="details">password</span>
+              <input type="text" [(ngModel)]="persona.password" name = "password" placeholder="Ingresa el telefono">
+          </div>
+
+          <div class="input-box">
+
+            <span class="details">email</span>
+              <input type="text" [(ngModel)]="persona.email" name = "email" placeholder="Ingresa el email" required>
+          </div>
+
+
+          <div class="input-box">
+            <span class="details">tipo </span>
+            <input type="text" [(ngModel)]="persona.userType" name = "usertype" placeholder="Ingresa el email" required>
+          </div>
+
+      <!--    <div class="input-box">
+               <span class="details">Rol</span>
+             <select name="sedes">
+             <option  selected value="Selecciona una sede" disabled>Selecciona el rolass</option>
+             <option>Administrador</option>
+             <option>Usuario</option>
+
+             </select>
+             </div> -->
+
+
+
+
+  </div>
+
+        <div class="button">
+          <input type="submit" value="Agregar">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
