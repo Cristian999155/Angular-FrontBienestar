@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Serviciobienestar } from '../serviciobienestar/serviciobienestar';
-import { ServiciobienestarService } from '../serviciobienestar/serviciobienestar.service';
 import {MatDialog} from '@angular/material/dialog';
-import { AddserviceComponent } from '../serviciobienestar/addservice.component';
-import { RouterLink } from '@angular/router';
+import { AddserviceComponent } from '../addservice.component';
+import { Serviciobienestar } from '../model/serviciobienestar';
+import { ServiciobienestarService } from '../model/serviciobienestar.service';
+
+
 
 @Component({
   selector: 'app-servicetable',

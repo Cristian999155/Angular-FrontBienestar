@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { AddserviceComponent } from '../serviciobienestar/addservice.component';
-import { Serviciobienestar } from '../serviciobienestar/serviciobienestar';
-import { ServiciobienestarService } from '../serviciobienestar/serviciobienestar.service';
+import { Serviciobienestar } from '../serviciobienestar/model/serviciobienestar';
+import { ServiciobienestarService } from '../serviciobienestar/model/serviciobienestar.service';
+
 
 
 @Component({
@@ -39,7 +40,7 @@ ser: Serviciobienestar = new Serviciobienestar();
   }
 
 cargarServicio(){
-   this.addService.geServicioId().subscribe( (ser) => this.ser = ser)
+  // this.addService.geServicioId().subscribe( (ser) => this.ser = ser)
 }
 
  addCardService(){ // funcion que agrega la card al html usando plantillas literales
@@ -134,7 +135,7 @@ cargarServicio(){
 
    addEditables(){ // funcion que modifica la propiedad "editable" a true a todos los titulos y la descripciones, lo que nos permite modificarlas
     document.getElementById("nombreE")!.innerHTML = this.ser.name;
-    
+
 }
 
  getMensaje() {

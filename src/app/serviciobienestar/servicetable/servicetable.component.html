@@ -16,10 +16,11 @@
   <div class="details">
                <div class="recentOrders">
                  <div class="cardHeader">
-                     <h2>Reservas</h2>
+                     <h2>Rservas</h2>
 
                      <div class="button">
-                       <input type="submit"  value="Agregar">
+                       <input type="submit" (click)="openAddForm()"  value="Agregar">
+
                      </div>
 
                  </div>
@@ -27,26 +28,32 @@
                    <table>
                        <thead>
                            <tr>
-                               <td>Nombres</td>
-                               <td>apellidos</td>
-                               <td>Identificación</td>
-                               <td>email</td>
-                               <td>rol</td>
+                              <td>Id</td>
+                               <td>Nombre Servicio</td>
+                               <td>Descripción</td>
+                               <td>Aforo</td>
+                               <td>Reservas</td>
                                <td>Editar</td>
                                <td>Eliminar</td>
+
+
 
                            </tr>
                        </thead>
 
                        <tbody>
-                           <tr *ngFor="let persona of personas">
-                             <td>{{ persona.name }}</td>
-                             <td>{{ persona.lastName }}</td>
-                             <td>{{ persona.id }}</td>
-                             <td>{{ persona.email }}</td>
-                             <td>{{ persona.userType }}</td>
-                             <td><i class="fa-solid fa-pen" style="color: blue;"></i></td>
+                           <tr *ngFor="let servicioBienestar of listService">
+                             <td>{{ servicioBienestar.id }}</td>
+                             <td>{{ servicioBienestar.name }}</td>
+                             <td>{{ servicioBienestar.description}}</td>
+                             <td>{{ servicioBienestar.capacity }}</td>
+
+
+
+                             <td><i class="fa-solid fa-eye" style="color: green;" [routerLink]="['/bookingtable', servicioBienestar.id]"></i></td>
+                             <td><i class="fa-solid fa-pen" style="color: blue;" [routerLink]="['/addservice', servicioBienestar.id]"></i></td>
                              <td><i class="fa-solid fa-trash" style="color: red;"></i></td>
+
 
                            </tr>
 

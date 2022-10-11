@@ -6,12 +6,12 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
-  	<app-sidebar></app-sidebar>
+
 
   <div class="container">
     <div class="title">Agregar Usuario</div>
     <div class="content">
-      <form (ngSubmit) = "create()" action="#">
+      <form action="#">
         <div class="service-details">
           <div class="input-box">
 
@@ -44,20 +44,20 @@
           </div>
 
 
-          <div class="input-box">
+      <!--    <div class="input-box">
             <span class="details">tipo </span>
             <input type="text" [(ngModel)]="persona.userType" name = "usertype" placeholder="Ingresa el email" required>
-          </div>
+          </div> -->
 
-      <!--    <div class="input-box">
+      <div class="input-box">
                <span class="details">Rol</span>
-             <select name="sedes">
-             <option  selected value="Selecciona una sede" disabled>Selecciona el rolass</option>
+             <select [(ngModel)]="persona.userType" name = "usertype">
+             <option  selected value="Selecciona una sede" disabled>Selecciona el rol</option>
              <option>Administrador</option>
              <option>Usuario</option>
 
              </select>
-             </div> -->
+             </div>
 
 
 
@@ -65,7 +65,7 @@
   </div>
 
         <div class="button">
-          <input type="submit" value="Agregar">
+          <input type="submit" (click)=listAndCloseService() value="Agregar">
         </div>
       </form>
     </div>

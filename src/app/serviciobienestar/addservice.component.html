@@ -9,7 +9,10 @@
 
 
   <div class="container">
-    <div class="title">Agregar Servicio</div>
+    <div class="title" *ngIf="!serviciobienestar.id else elseBlock1">Agregar Servicio</div>
+    <ng-template #elseBlock1>
+        <div class="title">Editar Servicio</div>
+    </ng-template>
     <div class="content">
       <form (ngSubmit) = "create()" action="#">
         <div class="service-details">
@@ -68,7 +71,10 @@
   </div>
 
         <div class="button">
-        <input name = "butAgregar" type="submit" (click)=listAndCloseService() routerLink="/servicetable" value="Agregar">
+        <input name = "butAgregar" type="submit" (click)=listAndCloseService() *ngIf="!serviciobienestar.id else elseBlock" value="Agregar">
+        <ng-template #elseBlock>
+            <input name = "butAgregar" type="submit" value="Editar">
+        </ng-template>
 
         </div>
       </form>

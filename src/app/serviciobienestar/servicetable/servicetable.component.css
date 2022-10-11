@@ -24,8 +24,8 @@ body {
 
 .form-group {
 	position: relative;
-  left: 920px;
-  top:-600px;
+  left: 10px;
+  top:-100px;
 }
 .form-group input {
 	width: 30%;
@@ -46,6 +46,7 @@ body {
 	transform: translateY(-50%);
 	right: 16px;
 	color: var(--dark-grey);
+  cursor: pointer;
 }
 
 

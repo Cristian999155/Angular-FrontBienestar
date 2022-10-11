@@ -1,10 +1,12 @@
 
 import { Component, OnInit} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Serviciobienestar } from './model/serviciobienestar';
+import { ServiciobienestarService } from './model/serviciobienestar.service';
+import { ServicetableComponent } from './servicetable/servicetable.component';
 
-import { ServicetableComponent } from '../servicetable/servicetable.component';
-import { Serviciobienestar } from './serviciobienestar';
-import { ServiciobienestarService } from './serviciobienestar.service';
+
 @Component({
   selector: 'app-addservice',
   templateUrl: './addservice.component.html',
@@ -15,12 +17,21 @@ export class AddserviceComponent implements OnInit {
 serviciobienestar : Serviciobienestar = new Serviciobienestar();
 
 
-  constructor(private dialogRef: MatDialog, private bienestarService: ServiciobienestarService) {
+  constructor(private dialogRef: MatDialog, private bienestarService: ServiciobienestarService, private activatedRoute: ActivatedRoute) {
 
   }
 
   ngOnInit(): void {
+    this.cargarServicio();
+  }
 
+  cargarServicio(){
+    this.activatedRoute.params.subscribe(params => {
+      let id = params['id']
+      if(id){
+       this.bienestarService.geServicioId(id).subscribe((serviciobienestar) => this.serviciobienestar = serviciobienestar )
+     }
+    })
   }
 
   public create(): void {
