@@ -11,6 +11,7 @@ import { Serviciobienestar } from 'src/app/serviciobienestar/model/serviciobiene
 export class BookingserviceService {
 
 private urlEndPoint: string = 'http://localhost:8080/api/v1/booking/searchByServiceId';
+private urlEndPoint2: string = 'http://localhost:8080/api/v1/booking/allBookingsAngular';
 booking: Booking = new Booking();
 
 
@@ -19,7 +20,7 @@ booking: Booking = new Booking();
 
   getReservas(): Observable<Booking[]> {
       //return of(CLIENTES);
-      return this.http.get(this.urlEndPoint).pipe(
+      return this.http.get(this.urlEndPoint2).pipe(
         map(response => response as Booking[])
       );
     }

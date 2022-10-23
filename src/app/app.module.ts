@@ -20,9 +20,14 @@ import { ServicetableComponent } from './serviciobienestar/servicetable/servicet
 import { UsertableComponent } from './personas/usertable/usertable.component';
 import { BookingComponent } from './booking/booking.component';
 import { BookingtableComponent } from './booking/bookingtable/bookingtable.component';
+import { AuthModule } from '@auth0/auth0-angular';
+import { ReservasComponent } from './reservas/reservas.component';
+import { TablereportComponent } from './booking/tablereport/tablereport.component';
+import { FilterPipe } from './booking/pipes/filter.pipe';
 
 
 const routes: Routes = [
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'sidebar', component:SidebarComponent},
   {path: 'login', component:LoginComponent},
   {path: 'card', component:ServiceCardComponent},
@@ -35,7 +40,9 @@ const routes: Routes = [
   {path: 'addservice/:id', component:AddserviceComponent},
   {path: 'addservice/:id', component:AddserviceComponent},
   {path: 'bookingtable', component:BookingtableComponent},
-  {path: 'bookingtable/:id', component:BookingtableComponent}
+  {path: 'bookingtable/:id', component:BookingtableComponent},
+  {path: 'reporttable', component:TablereportComponent},
+
 
 ];
 @NgModule({
@@ -54,7 +61,10 @@ const routes: Routes = [
     AddserviceComponent,
     ServicetableComponent,
     BookingComponent,
-    BookingtableComponent
+    BookingtableComponent,
+    ReservasComponent,
+    TablereportComponent,
+    FilterPipe
 
 
   ],
@@ -64,7 +74,12 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatDialogModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthModule.forRoot({
+    domain: 'dev-893iyjiu.us.auth0.com',
+    clientId: '2tKZym6uuNhzxj4Tb2DDDuA9LDYBrvgU'
+
+  }),
   ],
   providers: [],
   bootstrap: [AppComponent]

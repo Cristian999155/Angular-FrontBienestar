@@ -34,7 +34,20 @@ serviciobienestar : Serviciobienestar = new Serviciobienestar();
     })
   }
 
+
   public create(): void {
+
+  var sede = (<HTMLInputElement>document.getElementById('sede')).value;
+
+
+  if(sede == "Santa Ana")
+  {
+    this.serviciobienestar.campusId = {id: 1, name: "Santa Ana", address: "Salado"}
+
+  } else {
+    this.serviciobienestar.campusId = {id: 2, name: "Universidad De Ibagué", address: "Universidad"}
+  }
+  
   this.bienestarService.create(this.serviciobienestar).subscribe()
 
  console.log(this.serviciobienestar)

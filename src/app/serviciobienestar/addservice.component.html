@@ -20,7 +20,7 @@
           <div class="input-box">
 
             <span class="details">Nombre Servicio</span>
-            <input type="text"  [(ngModel)]="serviciobienestar.name" name = "name"placeholder="Ingresa el nombre del servicio" required>
+            <input type="text"  [(ngModel)]="serviciobienestar.name" name = "name" placeholder="Ingresa el nombre del servicio" required>
           </div>
 
     <!--      <div class="input-box">
@@ -34,25 +34,32 @@
 
 
 
-    <!--   <div class="input-box">
-            <span class="details">Sede</span>
-          <select name="sedes">
-          <option  selected value="Selecciona una sede" disabled>Selecciona una sede</option>
-          <option>Universidad De Ibagué</option>
-          <option>Santa Ana</option>
+    <!--
 
-          </select>
-          </div> -->
-  <div class="input-box">
-          <span class="details">sede</span>
-          <input type="number"  [(ngModel)]="serviciobienestar.campus_Id" name = "sede" placeholder="Ingresa el nombre del servicio" required>
-        </div>
+
+          <div class="input-box">
+                  <span class="details">sede</span>
+                  <input id="sede" type="number"  [(ngModel)]="serviciobienestar.campusId" name = "sede" placeholder="Ingresa el nombre del servicio" required>
+                </div>
+
 
 
       <!--    <div class="input-box">
             <span class="details">Hora Finalización del servicio</span>
             <input type="time" required>
           </div> -->
+
+          <div class="input-box">
+                  <span class="details">Sede</span>
+                <select id="sede" name="sedes">
+                <option  selected value="Selecciona una sede" disabled>Selecciona una sede</option>
+                <option>Universidad De Ibagué</option>
+                <option>Santa Ana</option>
+
+                </select>
+                </div>
+
+
 
   <div class="input-box">
           <span class="details">capacidad</span>

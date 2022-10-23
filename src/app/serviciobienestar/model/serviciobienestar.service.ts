@@ -9,14 +9,15 @@ import { map } from 'rxjs/operators';
 export class ServiciobienestarService {
   private urlEndPoint: string = 'http://localhost:8080/api/v1/offeredService';
   private ulrEndPoint2: string = 'http://localhost:8080/api/v1/offeredService/getAll';
-  private ulrEndPoint3: string = 'http://localhost:8080/api/v1/offeredService/id';
+  private ulrEndPoint3: string = 'http://localhost:8080/api/v1/offeredService/searchOfferedServiceById';
   constructor(private http: HttpClient) { }
 
 
   getServicios(): Observable<Serviciobienestar[]> {
-      //return of(CLIENTES);
+
       return this.http.get(this.ulrEndPoint2).pipe(
         map(response => response as Serviciobienestar[])
+
       );
     }
 
