@@ -25,7 +25,7 @@ body {
 .form-group {
 	position: relative;
   left: 920px;
-  top:-600px;
+  top:-700px;
 }
 .form-group input {
 	width: 30%;
@@ -47,6 +47,19 @@ body {
 	right: 16px;
 	color: var(--dark-grey);
 }
+
+.form-groug-dateInicial{
+  position: relative;
+  left: 300px;
+  top:-640px;
+}
+
+.form-groug-but{
+  position: relative;
+  left: 300px;
+  top:-640px;
+}
+
 
 
 

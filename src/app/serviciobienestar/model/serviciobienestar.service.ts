@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ServiciobienestarService {
-  private urlEndPoint: string = 'http://localhost:8080/api/v1/offeredService';
+  private urlEndPoint: string = 'http://localhost:8080/api/v1/offeredService/create';
   private ulrEndPoint2: string = 'http://localhost:8080/api/v1/offeredService/getAll';
   private ulrEndPoint3: string = 'http://localhost:8080/api/v1/offeredService/searchOfferedServiceById';
   constructor(private http: HttpClient) { }

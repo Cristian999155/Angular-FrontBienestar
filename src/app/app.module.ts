@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddAdminUserComponent } from './add-admin-user/add-admin-user.component';
 import { PersonasComponent } from './personas/personas.component';
 import { AddformuserComponent } from './personas/addformuser.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiciobienestarComponent } from './serviciobienestar/serviciobienestar.component';
 import { AddserviceComponent } from './serviciobienestar/addservice.component';
@@ -24,6 +24,10 @@ import { AuthModule } from '@auth0/auth0-angular';
 import { ReservasComponent } from './reservas/reservas.component';
 import { TablereportComponent } from './booking/tablereport/tablereport.component';
 import { FilterPipe } from './booking/pipes/filter.pipe';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { DatePipe } from '@angular/common';
 
 
 const routes: Routes = [
@@ -64,7 +68,8 @@ const routes: Routes = [
     BookingtableComponent,
     ReservasComponent,
     TablereportComponent,
-    FilterPipe
+    FilterPipe,
+
 
 
   ],
@@ -75,13 +80,17 @@ const routes: Routes = [
     MatDialogModule,
     FormsModule,
     HttpClientModule,
-    AuthModule.forRoot({
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+   AuthModule.forRoot({
     domain: 'dev-893iyjiu.us.auth0.com',
     clientId: '2tKZym6uuNhzxj4Tb2DDDuA9LDYBrvgU'
 
   }),
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
