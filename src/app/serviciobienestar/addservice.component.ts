@@ -5,6 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Serviciobienestar } from './model/serviciobienestar';
 import { ServiciobienestarService } from './model/serviciobienestar.service';
 import { ServicetableComponent } from './servicetable/servicetable.component';
+import Swal from 'sweetalert2'
 
 
 @Component({
@@ -47,10 +48,10 @@ serviciobienestar : Serviciobienestar = new Serviciobienestar();
   } else {
     this.serviciobienestar.campusId = {id: 2, name: "Universidad De Ibagué", address: "Universidad"}
   }
-  
+
   this.bienestarService.create(this.serviciobienestar).subscribe()
 
- console.log(this.serviciobienestar)
+   Swal.fire('Nuevo Servicio', `El servicio ha sido creado con éxito`, 'success');
  }
 
 

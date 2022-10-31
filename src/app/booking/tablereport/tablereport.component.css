@@ -24,8 +24,8 @@ body {
 
 .form-group {
 	position: relative;
-  left: 920px;
-  top:-700px;
+  left: 420px;
+  top:-620px;
 }
 .form-group input {
 	width: 30%;
@@ -48,6 +48,32 @@ body {
 	color: var(--dark-grey);
 }
 
+.form-group2 {
+	position: relative;
+  left: 420px;
+  top:-600px;
+}
+.form-group2 input {
+	width: 30%;
+	background: var(--grey);
+	border-radius: 15px;
+  border: outset;
+	outline: none;
+	padding: 10px 36px 10px 16px;
+	transition: all .3s ease;
+}
+.form-group2 input:focus {
+	box-shadow: 0 0 0 1px var(--blue), 0 0 0 4px var(--light-blue);
+}
+.form-group2 .icon {
+	position: relative;
+  left: -30px;
+	top: 12px;
+	transform: translateY(-50%);
+	right: 16px;
+	color: var(--dark-grey);
+}
+
 .form-groug-dateInicial{
   position: relative;
   left: 300px;
@@ -60,8 +86,34 @@ body {
   top:-640px;
 }
 
+::ng-deep .mat-form-field {
+ /*change color of label*/
+ position: relative;
+ top: -60px;
+ left:800px;
+}
 
-
+.cardHeader .button{
+  height: 35px;
+  width: 260px;
+  margin: 35px 0;
+  left: 1100px;
+  position: relative;
+  top: -740px;
+}
+.cardHeader .button input{
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background:#114177;
+}
 
 /* ================== Order Details List ============== */
 .details {
@@ -69,7 +121,7 @@ body {
   left: 400px;
   width: 100%;
   padding: 20px;
-  top: -600px;
+  top: -730px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 30px;

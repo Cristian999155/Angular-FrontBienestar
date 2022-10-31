@@ -29,10 +29,25 @@ body{
   width: 250px;
 }
 
+.image2 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image2{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  left: 200px;
+
+}
+
 .container .image img{
   max-width: 100%;
   max-height: 100%;
 }
+
+
 .container .title{
     position: relative;
     font-size: 27px;
@@ -42,8 +57,8 @@ body{
 .login-container{
     position: relative;
     left: 350px;
-
-    max-width: 430px;
+    line-height: 300%;
+    max-width: 630px;
     width: 100%;
     background: white;
     border-radius: 10px;
@@ -87,16 +102,7 @@ body{
     color: #114177;
 }
 
-.title::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    background-color: #4070f4;
-    border-radius: 25px;
-}
+
 
 .form .input-field{
     position: relative;
@@ -175,7 +181,11 @@ body{
 }
 
 .form .button{
+  position: relative;
     margin-top: 35px;
+    width: 85%;
+    left: 50px;
+    top: 50px;
 }
 
 .form .button input{

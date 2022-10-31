@@ -16,7 +16,7 @@
   <div class="details">
                <div class="recentOrders">
                  <div class="cardHeader">
-                     <h2>Rservas</h2>
+                     <h2>Servicios Ofertados</h2>
 
                      <div class="button">
                        <input type="submit" (click)="openAddForm()"  value="Agregar">
@@ -52,7 +52,7 @@
 
                              <td><i class="fa-solid fa-eye" style="color: green;" [routerLink]="['/bookingtable', servicioBienestar.id]"></i></td>
                              <td><i class="fa-solid fa-pen" style="color: blue;" [routerLink]="['/addservice', servicioBienestar.id]"></i></td>
-                             <td><i class="fa-solid fa-trash" style="color: red;"></i></td>
+                             <td><i class="fa-solid fa-trash" (click)= eliminar(servicioBienestar) style="color: red;"></i></td>
 
 
                            </tr>

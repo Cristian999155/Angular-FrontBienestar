@@ -10,6 +10,8 @@ export class ServiciobienestarService {
   private urlEndPoint: string = 'http://localhost:8080/api/v1/offeredService/create';
   private ulrEndPoint2: string = 'http://localhost:8080/api/v1/offeredService/getAll';
   private ulrEndPoint3: string = 'http://localhost:8080/api/v1/offeredService/searchOfferedServiceById';
+  private ulrEndPoint4: string = 'http://localhost:8080/api/v1/offeredService/deleteOfferedServiceById';
+
   constructor(private http: HttpClient) { }
 
 
@@ -29,6 +31,12 @@ export class ServiciobienestarService {
         return this.http.get<Serviciobienestar>(`${this.ulrEndPoint3}/${id}`)
       }
 
+
+
+      delete(id: number): Observable<Serviciobienestar> {
+
+      return this.http.delete<Serviciobienestar>(`${this.ulrEndPoint4}/${id}`)
+      }
 
 
 }

@@ -10,22 +10,30 @@
 
 <body>
 	<app-sidebar></app-sidebar>
+
   <form action="#">
     <div class="form-group">
-      <input type="text"  placeholder="Buscar....." [(ngModel)]="filterPost" name = "filterPost">
+      <input type="text"  placeholder="Ingresa el nombre del usuario" [(ngModel)]="filterPost" name = "filterPost">
+
+
       <i class='bx bx-search icon' ></i>
     </div>
 
+    <div class="form-group2">
 
+      <input type="text"  placeholder="Ingresa el nombre del servicio" name = "filterService">
+
+      <i class='bx bx-search icon' ></i>
+    </div>
 
     <div class="form-groug-dateInicial">
       <mat-form-field appearance="fill">
-      <mat-label>Enter a date range</mat-label>
+      <mat-label>Selecciona un rango de fechas</mat-label>
       <mat-date-range-input [rangePicker]="picker" [formGroup]="range">
         <input matStartDate placeholder="Start date" formControlName="start">
         <input matEndDate placeholder="End date" formControlName="end">
         </mat-date-range-input>
-      <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-date-range-picker #picker></mat-date-range-picker>
     </mat-form-field>
@@ -33,10 +41,15 @@
     </div>
 
 
-  <div class="form-groug-but" (click)="listaBookingsByDate()">
-    <button >Buscar</button>
+   <div class="cardHeader">
+
+  <div class="button">
+
+     <input type="submit" (click)="listaBookingsByDate()"  value="Buscar">
 
   </div>
+
+    </div>
 
 
   </form>
